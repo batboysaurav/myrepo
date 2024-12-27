@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Original gradient */
       margin: 0;
       padding: 0;
       display: flex;
@@ -19,13 +19,14 @@
 
     .container {
       text-align: center;
-      background: linear-gradient(145deg, #ffffff, #ffe6e6);
+      background: linear-gradient(145deg, #ffffff, #ffe6e6); /* White and Light Pink */
       box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
       border-radius: 15px;
       padding: 30px;
       width: 90%;
       max-width: 400px;
       transition: all 0.5s ease;
+      position: relative;
     }
 
     .hidden {
@@ -34,7 +35,7 @@
 
     h1 {
       font-size: 2.5rem;
-      color: #ff6b81;
+      color: #ff6b81; /* Wine Red */
       text-shadow: 1px 1px 2px #000;
     }
 
@@ -59,7 +60,7 @@
     }
 
     li span {
-      color: #ff6b81;
+      color: #ff6b81; /* Wine Red */
       font-size: 1.5rem;
       margin-right: 10px;
     }
@@ -67,7 +68,7 @@
     .btn {
       margin-top: 20px;
       padding: 12px 25px;
-      background: linear-gradient(90deg, #ff6b81, #f093fb);
+      background: linear-gradient(90deg, #ff6b81, #f093fb); /* Wine Red and Light Purple */
       color: #fff;
       border: none;
       border-radius: 30px;
@@ -81,12 +82,12 @@
 
     .btn:hover {
       transform: scale(1.1);
-      background: linear-gradient(90deg, #f093fb, #ff6b81);
+      background: linear-gradient(90deg, #f093fb, #ff6b81); /* Reversed gradient */
     }
 
     .highlight {
       font-weight: bold;
-      color: #ff6b81;
+      color: #ff6b81; /* Wine Red */
     }
 
     .premium-text {
@@ -98,7 +99,7 @@
 
     .heart {
       position: absolute;
-      color: #ff6b81;
+      color: #ff6b81; /* Wine Red */
       animation: floatUp 5s infinite ease-in-out;
     }
 
@@ -106,6 +107,21 @@
       0% { transform: translateY(0); opacity: 1; }
       100% { transform: translateY(-200px); opacity: 0; }
     }
+
+    /* New Notice Style */
+    .notice {
+      font-size: 1.4rem;
+      color: #ff6b81;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+      padding: 15px;
+      background-color: #ffe6e6;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* Added space before 'Lifetime Subscription' */
+    }
+
   </style>
 </head>
 <body>
@@ -118,26 +134,32 @@
   <!-- Quiz Container -->
   <div id="quiz-container" class="container hidden">
     <h1>How Well Do You Know Saurav? 💕</h1>
-    <p>Question: What's Saurav's favorite destination?</p>
+    <p>Question: What's Saurav's favorite destination to go with you Miss Pavas Brahmvanshi?</p>
     <button class="btn" onclick="answerCorrect()">Manali</button>
     <button class="btn" onclick="answerWrong()">Goa</button>
   </div>
 
   <!-- Premium Features Container -->
   <div id="premium-container" class="container hidden">
+
+
     <h1>Saurav Premium</h1>
     <p>Here’s what you get with Saurav Premium:</p>
     <ul>
       <li><span>😂</span> <span class="highlight">Great laughs</span> every day.</li>
       <li><span>🍫</span> Unlimited <span class="highlight">Kinder Joys</span>.</li>
-      <li><span>😘</span> Kisses, hugs (and <span class="highlight">more</span> if you want).</li>
+      <li><span>😘</span> Kisses, hugs (and <span class="highlight">more </span> things if you want).</li>
       <li><span>🤵‍♂️</span> <span class="highlight">Gentleman treatment</span> always.</li>
       <li><span>🎮</span> Play <span class="highlight">Resident Evil</span> with Saurav.</li>
       <li><span>🏔️</span> <span class="highlight">Fantasy</span> getaway to Manali.</li>
       <li><span>🌹</span> A <span class="highlight">companion</span> for life.</li>
+      <li><span>🐺</span> Saurav <span class="highlight">Wolf</span> by your side, forever.</li> <!-- New addition -->
+      <li><span>👶</span> You can have <span class="highlight">kids</span> with Saurav. 💕</li> <!-- New addition -->
     </ul>
     <p class="premium-text">
-      Lifetime Only for You, <br> Miss Pavas aka Amavas Brahmavanshi ❤️
+      Lifetime Subscription Only for You, <br> Miss Pavas aka Amavas Brahmvanshi ❤️
+      <br><br>
+Don't wait Pavas, say yes to Saurav! 💖
     </p>
     <button class="btn" onclick="sendPremiumMessage()">Get Premium Now</button>
   </div>
